@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MorseConverter</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1>MorseConverter</h1>
+    </header>
+    <main class="main-container">
+        <div>
+            <form action="/convert" method="post">
+                <label for="text">Enter text to convert to Morse code:</label><br>
+                <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
+                <button type="submit">Convert</button>
+            </form>
+        <div>
+        <div class="output-container">
+            <h2>Morse Code Output:</h2>
+            <p id="morse-output">iiffqkfo</p>
+        </div>
+    </main>
+</body>
+</html>
