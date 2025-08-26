@@ -5,7 +5,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker)
 
 
-**MorseConverter** es una aplicación web que traduce texto a código **Morse** y viceversa. El proyecto combina **Python + Flask** para la lógica y la interfaz web, utiliza **Regex** para validar las entradas de usuario y está preparado con **Docker** para facilitar su despliegue en cualquier entorno.
+**MorseConverter** es una aplicación web para traducir texto a código Morse y viceversa, diseñada con Python y Flask, y empaquetada con Docker para un despliegue sencillo. Este proyecto muestra mi capacidad para construir aplicaciones web funcionales, validar entradas de usuario con Regex y garantizar portabilidad con contenedores.
 
 ---
 
@@ -14,17 +14,17 @@
 * 🔤 **Texto → Morse**: Conversión rápida de texto a código Morse.
 * 🖋️ **Morse → Texto**: Conversión inversa de código Morse a texto plano.
 * ✅ **Validación con Regex**: Control de entradas para evitar caracteres no soportados.
-* 🌐 **Interfaz Web**: Formulario simple desarrollado con Flask Templates.
+* 🌐 **Interfaz Web**: Formulario intuitivo creado con Flask Templates para una interacción sencilla.
 * 🐳 **Docker Ready**: Implementación Docker con `Dockerfile` y `docker-compose`.
 
 ---
 
 ## 🛠️ Tecnologías Clave
 
-* **Python** → Lenguaje base para la lógica de conversión.
-* **Flask** → Framework web ligero para unir backend y frontend.
-* **Regex** → Validación de datos eficiente y segura.
-* **Docker & Docker Compose** → Contenedores reproducibles y despliegue simplificado.
+* **Python** → Lógica de conversión robusta y manejo de dependencias.
+* **Flask** → Framework ligero para integrar backend y frontend.
+* **Regex** → Validación eficiente de entradas de usuario.
+* **Docker & Docker Compose** → Contenedores para un despliegue portátil y consistente.
 
 ---
 
@@ -32,9 +32,10 @@
 
 Este proyecto me permitió:
 
-* Profundizar en **Python** aplicando buenas prácticas de programación y gestión de dependencias, enfrentando tanto problemas de lógica como desafíos de configuración de entornos, sentando una base sólida para proyectos más complejos.
-* Desarrollar e integrar el backend y frontend usando **Flask**, construyendo una aplicación web funcional y coherente.
-* Implementar Docker, asegurando portabilidad y ejecución consistente en distintos entornos, facilitando la prueba y despliegue de la aplicación.
+* Python y Flask: Desarrollé una aplicación web completa, desde la lógica de conversión hasta la renderización de plantillas, aplicando buenas prácticas como modularidad y manejo de errores.
+* Regex: Diseñé expresiones regulares para validar entradas, resolviendo problemas como el manejo de caracteres no soportados y entradas de usuario defectuosas.
+* Docker: Configuré Dockerfile / Docker-compose y optimicé la imagen para despliegues eficientes, enfrentando situaciones como la reducción del tamaño de la imagen.
+* Gestión de dependencias: Creé un requirements.txt para garantizar reproducibilidad en entornos locales y contenedores.
 
 ---
 
