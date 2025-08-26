@@ -47,6 +47,7 @@ Este proyecto incluye una imagen de Docker lista para usar y también se puede *
 # Descargar y ejecutar la imagen desde Docker Hub
 docker pull ivangomezdellosa/morseconvertor:v1
 docker run -p 5000:5000 ivangomezdellosa/morseconvertor:v1
+```
 
 ### Opción 2: Construir localmente
 ```bash
@@ -65,3 +66,16 @@ Una vez iniciado el contenedor, la aplicación estará disponible en:
 ### Requisitos
 - Docker instalado
 - Docker Compose (para construcción local)
+
+# Clonar el repositorio
+git clone https://github.com/IvanGomezDellOsa/MorseConverter.git
+cd MorseConverter
+
+# Construir y ejecutar con docker-compose
+docker-compose up --build
+# Clonar el repositorio
+git clone https://github.com/IvanGomezDellOsa/MorseConverter.git
+cd MorseConverter
+
+# Construir y ejecutar con docker-compose
+docker-compose up --build
