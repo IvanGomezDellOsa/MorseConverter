@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MorseConverter</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
+    <main class="container">
         <h1>MorseConverter</h1>
-    </header>
-    <main class="main-container">
         <div>
-            <form action="/convert" method="post">
-                <label for="text">Enter text to convert to Morse code:</label><br>
-                <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
+            <form action="{{ url_for('index') }}" method="POST">
+                <input type="text" id="user_input" name="user_input" placeholder="Enter text or Morse code to convert:" required>
                 <button type="submit">Convert</button>
             </form>
         <div>
-        <div class="output-container">
-            <h2>Morse Code Output:</h2>
-            <p id="morse-output">iiffqkfo</p>
-        </div>
+        {% if result %}
+            <div class="result">
+                <h2>Result:</h2>
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+        {% if error %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
     </main>
 </body>
 </html>

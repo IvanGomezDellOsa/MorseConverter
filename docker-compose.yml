@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  morseconvertor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: morseconvertor:v1
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - FLASK_ENV=development

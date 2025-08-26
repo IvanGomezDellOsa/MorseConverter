@@ -1,4 +1,7 @@
 import re
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
 
 DICTIONARY_MORSE = {
     'A': '.-',     'B': '-...',   'C': '-.-.',   'D': '-..',    'E': '.',      'F': '..-.',
@@ -30,7 +33,7 @@ def is_morse(input_data):
     code = normalize_morse_input(input_data)
     if all(morse_units in DICTIONARY_REVERSE for morse_units in code):
         return True
-    raise ValueError("Invalid Morse code.")
+    raise ValueError("Error: Character not found in Morse dictionary:")
 
 def morse_to_text(input_code):
     split_code = normalize_morse_input(input_code)
@@ -47,14 +50,24 @@ def text_to_morse(text):
     return morse_result
 
 
-user_input = input("Enter text or Morse code to convert: ")
-if is_valid_input(user_input):
-    try:
-        if is_morse(user_input):
-            print(morse_to_text(user_input))
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    result = None
+    error = None
+    if request.method == 'POST':
+        user_input = request.form.get('user_input', '')
+        if is_valid_input(user_input):
+            try:
+                if is_morse(user_input):
+                    result = morse_to_text(user_input)
+                else:
+                    result = text_to_morse(user_input)
+            except (ValueError, KeyError):
+                error = 'Error: Character not found in Morse dictionary:'
         else:
-            print (text_to_morse(user_input))
-    except ValueError as e:
-        print(f'Error: {e}')
-else:
-    print("Error: Invalid input. Verify that you are not using special characters like ñ, ü, etc.")
+            error = "Error: Invalid input. Please enter valid text or Morse code (no special characters like ñ, ü, etc)."
+    return render_template('index.html', result=result, error=error)
+
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000, debug=True)
