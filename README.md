@@ -2,8 +2,8 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Framework-black?logo=flask)
-![Regex](https://img.shields.io/badge/Regex-Validation-orange?logo=regex)
-![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?logo=docker)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker)
+
 
 **MorseConverter** es una aplicación web que traduce texto a código **Morse** y viceversa. El proyecto combina **Python + Flask** para la lógica y la interfaz web, utiliza **Regex** para validar las entradas de usuario y está preparado con **Docker** para facilitar su despliegue en cualquier entorno.
 
